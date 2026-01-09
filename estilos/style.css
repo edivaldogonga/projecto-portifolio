@@ -36,6 +36,9 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
 }
 
 nav#menu ul {
@@ -257,6 +260,23 @@ footer a:hover {
 }
 
 @media screen and (min-width: 768px) {
+
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+
+  }
+
+  section#ficha {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+  }
+
+  section#detalhes {
+    grid-column: 3 / 4;
+  }
+
   #skills-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -270,9 +290,9 @@ footer a:hover {
     max-width: 80%;
   }
 
-  #projectos-container .foto {
+  #projectos-container a> img.foto {
     aspect-ratio: 1/1;
-    max-width: 30%;
+    max-width: 80%;
     max-height: 200px;
   }
 }
